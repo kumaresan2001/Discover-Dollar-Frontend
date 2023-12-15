@@ -10,15 +10,10 @@ import {
   styled,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Search from "./Search";
 import CustomButton from "./CustomButton";
 import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
-
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import { myContext } from "../../App";
 
 const StyledHeader = styled(AppBar)`
   background-color: #2874f0;
@@ -59,7 +54,6 @@ const MenuBtn = styled(IconButton)(({ theme }) => ({
 
 function Header() {
   const [open, setOpen] = useState(false);
-  const [mode, setMode] = useContext(myContext);
 
   const logoURL =
     "https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png";
@@ -116,15 +110,6 @@ function Header() {
         <CustomBtnWrapper>
           <CustomButton />
         </CustomBtnWrapper>
-        <Button
-          color="inherit"
-          variant="containd"
-          startIcon={
-            mode === "light" ? <Brightness7Icon /> : <Brightness4Icon />
-          }
-          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
-          sx={{ marginLeft: "auto" }}
-        ></Button>
       </Toolbar>
     </StyledHeader>
   );
