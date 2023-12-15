@@ -4,7 +4,7 @@ import Home from "../src/components/home/Home";
 import DataProvider from "./context/DataProvider";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import DetailView from "./components/details/DetailView";
-import Cart from "../src/components/Cart/Cart";
+import Cart from "./components/cart/Cart";
 import OrderSuccess from "./components/cart/OrderSuccess";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
